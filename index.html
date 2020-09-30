@@ -22,14 +22,14 @@
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
 	<link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	
 
 </head>
+
 <body ng-controller="AppController">
 	<!-- Page Preloder -->
-	<div id="preloder">
+	<!-- <div id="preloder">
 		<div class="loader"></div>
-	</div>
+	</div> -->
 
 	<!-- Offcanvas Menu Section Begin -->
 	<div class="offcanvas-menu-overlay"></div>
@@ -41,28 +41,15 @@
 			<i class="icon_close"></i>
 		</div>
 		<div class="language-bar">
-			<div class="language-option">
-				<img src="img/flag.png" alt="">
-				<span>English</span>
-				<i class="fa fa-angle-down"></i>
-				<div class="flag-dropdown">
-					<ul>
-						<li><a href="#">English</a></li>
-						<li><a href="#">Germany</a></li>
-						<li><a href="#">China</a></li>
-					</ul>
-				</div>
-			</div>
+			
 			<div class="property-btn">
-				<a href="#" class="property-sub">Submit Property</a>
+				<a ui-sref="sell" class="property-sub">Submit Property</a>
 			</div>
 		</div>
 		<nav class="main-menu">
 			<ul>
 				<li><a ui-sref="home">Home</a></li>
-				<li><a href="./property.html">Property</a></li>
-				<li><a href="./about-us.html">Agets</a></li>
-				<li><a href="./blog.html">News</a></li>
+				<li><a ui-sref="property">Property</a></li>
 				<li><a ui-sref="aboutUs">About</a></li>
 				<li><a ui-sref="contactUs">Contact</a></li>
 			</ul>
@@ -104,29 +91,15 @@
 						<nav class="main-menu">
 							<ul>
 								<li><a ui-sref="home">Home</a></li>
-								<li><a href="./property.html">Property</a></li>
-								<li><a href="./about-us.html">Agets</a></li>
-								<li><a href="./blog.html">News</a></li>
-								<li><a ui-sref="aboutUs">About</a></li>
+								<li><a ui-sref="property">Property</a></li><li><a ui-sref="aboutUs">About</a></li>
 								<li><a ui-sref="contactUs">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
 					<div class="col-lg-5">
 						<div class="top-right">
-							<div class="language-option">
-								<img src="img/flag.png" alt="">
-								<span>English</span>
-								<i class="fa fa-angle-down"></i>
-								<div class="flag-dropdown">
-									<ul>
-										<li><a href="#">English</a></li>
-										<li><a href="#">Germany</a></li>
-										<li><a href="#">China</a></li>
-									</ul>
-								</div>
-							</div>
-							<a href="#" class="property-sub">Submit Property</a>
+							
+							<a ui-sref="sell" class="property-sub">Submit Property</a>
 						</div>
 					</div>
 				</div>
@@ -172,6 +145,34 @@
 		</div>
 	</header>
 	<!-- Header End -->
+	<!-- Start of Async Drift Code -->
+	<script>
+		"use strict";
+		!function() {
+			var t = window.driftt = window.drift = window.driftt || [];
+			if (!t.init) {
+				if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+				t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+				t.factory = function(e) {
+					return function() {
+						var n = Array.prototype.slice.call(arguments);
+						return n.unshift(e), t.push(n), t;
+					};
+				}, t.methods.forEach(function(e) {
+					t[e] = t.factory(e);
+				}), t.load = function(t) {
+					var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+					o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+					var i = document.getElementsByTagName("script")[0];
+					i.parentNode.insertBefore(o, i);
+				};
+			}
+		}();
+		drift.SNIPPET_VERSION = '0.3.1';
+		drift.load('tax837ak8ggc');
+	</script>
+
+	<!-- End of Async Drift Code -->
 	<div>
 		<div ui-view> </div>
 	</div>
