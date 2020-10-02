@@ -14,5 +14,5 @@ propertyApp.controller('AppController', ['$scope', '$rootScope', '$location', '$
 propertyApp.run(['$rootScope', '$http','$state','$window', '$filter', '$location',
 	function($rootScope, $http, $state,$window, $filter,$location) {
 		console.log('hello from template main js')
-
+		
 	}]);
